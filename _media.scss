@@ -1,0 +1,1337 @@
+@media screen and (min-width: 1076px) and (max-width: 1200px) {
+    header {
+        .wrapper {
+            nav {
+                .sect-nav {
+                    li {
+                        .sect-btn {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            h1 {
+                width: 80%;
+                font-size: 3.5rem;
+
+                .static {
+                    .intro {
+                        font-size: 2rem;
+                    }
+                }
+
+                .dynamic-txts {
+                    top: 50%;
+                    right: 13%;
+
+                    li {
+                        font-size: 2rem;
+
+                        span::after {
+                            height: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    main {
+        #about {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .myAbout {
+                .profilePic {
+                    img {
+                        width: 55%;
+                        height: 55%;
+
+                    }
+                }
+
+                ul {
+                    li {
+                        padding: 2.2rem;
+
+                        h3 {
+                            font-size: 1.8rem;
+
+                        }
+
+                        p {
+                            font-size: 1.2rem;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        #skills {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .grid {
+                padding: 2.5rem;
+
+                ul {
+                    grid-template-columns: repeat(5, 12rem);
+                    grid-template-rows: 12rem;
+                    grid-auto-rows: 12rem;
+
+                    #response {
+
+                        i {
+                            margin: 0.8rem 0;
+                            font-size: 2.65rem;
+                        }
+                    }
+
+                    li {
+
+                        height: 10rem;
+                        width: 10rem;
+                        margin: 0;
+
+
+                        h3 {
+
+                            font-size: 1.2rem;
+                        }
+
+                        i {
+                            font-size: 4.2rem;
+                        }
+                    }
+
+                    i {
+                        transform: translateY(100%);
+                        color: var(--color-secondary);
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+
+        #projects {
+
+            h2 {
+                font-size: 2.5rem;
+                padding-bottom: 1.5rem;
+
+            }
+
+            .projectWrapper {
+                margin: 4rem 1.5rem;
+            }
+
+            .projectInfo {
+
+                h3 {
+
+                    font-size: 2rem;
+                }
+
+                p {
+
+                    font-size: 1.25rem;
+                }
+
+                .techs {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        #contact {
+
+
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            h4 {
+                font-size: 1.5rem;
+
+            }
+
+            ul {
+
+                i {
+                    font-size: 1.4rem;
+
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: var(--color-tertiary);
+
+        p {
+
+            font-size: .8rem;
+
+        }
+    }
+}
+
+@media screen and (min-width: 905px) and (max-width: 1076px) {
+    header {
+        .wrapper {
+            nav {
+                .sect-nav {
+                    li {
+                        .sect-btn {
+                            font-size: .85rem;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            h1 {
+                width: 80%;
+                font-size: 3.1rem;
+
+                .static {
+                    .intro {
+                        font-size: 1.85rem;
+                    }
+                }
+
+                .dynamic-txts {
+                    top: 37%;
+                    right: 14%;
+
+                    li {
+                        font-size: 2rem;
+
+                        span::after {
+                            height: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    main {
+        #about {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .myAbout {
+                .profilePic {
+                    img {
+                        width: 55%;
+                        height: 55%;
+
+                    }
+                }
+
+                ul {
+                    li {
+                        padding: 2.2rem;
+
+                        h3 {
+                            font-size: 1.65rem;
+
+                        }
+
+                        p {
+                            font-size: 1rem;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        #skills {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .grid {
+                padding: 2.5rem;
+
+                ul {
+                    grid-template-columns: repeat(5, 11rem);
+                    grid-template-rows: 11rem;
+                    grid-auto-rows: 11rem;
+
+                    #response {
+
+                        i {
+                            font-size: 2.75rem;
+                        }
+                    }
+
+                    li {
+
+                        height: 10rem;
+                        width: 10rem;
+                        margin: 0;
+
+
+                        h3 {
+
+                            font-size: 1.15rem;
+                        }
+
+                        i {
+                            font-size: 3.5rem;
+                        }
+                    }
+
+                    i {
+                        transform: translateY(100%);
+                        color: var(--color-secondary);
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+
+        #projects {
+
+            h2 {
+                font-size: 2.25rem;
+                padding-bottom: 1.5rem;
+
+            }
+
+            .projectWrapper {
+                margin: 4rem 1.5rem;
+
+                .projectImg {
+                    .hover-item {
+                        ul {
+                            li {
+                                h3 {
+                                    font-size: .7rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .projectInfo {
+
+                h3 {
+
+                    font-size: 1.85rem;
+                }
+
+                p {
+
+                    font-size: 1.15rem;
+                }
+
+                .techs {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+
+        #contact {
+
+
+
+            h3 {
+                font-size: 1.85rem;
+            }
+
+            h4 {
+                font-size: 1.25rem;
+
+            }
+
+            ul {
+
+                i {
+                    font-size: 1.3rem;
+
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: var(--color-tertiary);
+
+        p {
+
+            font-size: .85rem;
+
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 905px) {
+    header {
+        .wrapper {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+
+
+                .toggle {
+                    display: flex;
+                }
+
+                .sect-nav {
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    padding: .85rem;
+
+                    li {
+                        padding: 1.25rem 0;
+
+                        .sect-btn {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                .sect-nav.on {
+                    display: flex;
+                }
+            }
+
+            h1 {
+                width: 80%;
+                font-size: 2.65rem;
+
+                .static {
+                    .intro {
+                        font-size: 1.2rem;
+
+                        .info {
+                            display: none;
+                        }
+                    }
+                }
+
+                .dynamic-txts {
+                    display: none;
+
+                    li {
+                        font-size: 1.2rem;
+
+                        span::after {
+                            height: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    main {
+        #about {
+            h2 {
+                font-size: 1.95rem;
+            }
+
+            .myAbout {
+                .profilePic {
+                    img {
+                        width: 50%;
+                        height: 50%;
+
+                    }
+                }
+
+                ul {
+                    li {
+
+                        h3 {
+                            font-size: 1.2rem;
+
+                        }
+
+                        p {
+                            font-size: .95rem;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        #skills {
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .grid {
+                padding: 2rem;
+
+                ul {
+                    grid-template-columns: repeat(5, 9rem);
+                    grid-template-rows: 9rem;
+                    grid-auto-rows: 9rem;
+
+                    #response {
+
+                        i {
+                            font-size: 2.2rem;
+                        }
+                    }
+
+                    li {
+                        height: 8rem;
+                        width: 8rem;
+
+
+                        h3 {
+
+                            font-size: 1rem;
+                        }
+
+                        i {
+                            font-size: 3.2rem;
+                        }
+                    }
+
+                    i {
+                        transform: translateY(100%);
+                        color: var(--color-secondary);
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+
+        #projects {
+
+            h2 {
+                font-size: 1.8rem;
+
+            }
+
+            .projectWrapper {
+                margin: 4rem 1.5rem;
+
+                .projectImg {
+                    .hover-item {
+                        ul {
+                            li {
+                                h3 {
+                                    font-size: .7rem;
+                                }
+
+                                a {
+                                    i {
+                                        font-size: .9rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .projectInfo {
+
+                h3 {
+
+                    font-size: 1.3rem;
+                }
+
+                p {
+
+                    font-size: .85rem;
+                }
+
+                .techs {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        #contact {
+
+
+            h3 {
+                font-size: 1.85rem;
+            }
+
+            h4 {
+                font-size: .85rem;
+
+            }
+
+            ul {
+
+                i {
+                    font-size: .70rem;
+
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: var(--color-tertiary);
+
+        p {
+
+            font-size: .7rem;
+
+        }
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    header {
+        .wrapper {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+
+
+                .toggle {
+                    display: flex;
+                }
+
+                .sect-nav {
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    padding: .65rem;
+
+                    li {
+                        padding: 1.1rem 0;
+
+                        .sect-btn {
+                            font-size: .85rem;
+                        }
+                    }
+                }
+
+                .sect-nav.on {
+                    display: flex;
+                }
+            }
+
+            h1 {
+                width: 100%;
+                font-size: 2.45rem;
+
+                .static {
+                    .intro {
+                        font-size: 1.2rem;
+
+                        .info {
+                            display: none;
+                        }
+                    }
+                }
+
+                .dynamic-txts {
+                    display: none;
+
+                    li {
+                        font-size: 1.2rem;
+
+                        span::after {
+                            height: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    main {
+        #about {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .myAbout {
+                .profilePic {
+                    img {
+                        width: 50%;
+                        height: 50%;
+
+                    }
+                }
+
+                ul {
+                    li {
+
+                        h3 {
+                            font-size: 1rem;
+
+                        }
+
+                        p {
+                            font-size: .8rem;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        #skills {
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .grid {
+                padding: 2rem;
+
+                ul {
+                    grid-template-columns: repeat(3, 10rem);
+                    grid-template-rows: 10rem;
+                    grid-auto-rows: 10rem;
+
+                    #response {
+
+                        i {
+                            margin: 0.2rem 0;
+                            font-size: 2rem;
+                        }
+                    }
+
+                    li {
+                        height: 9rem;
+                        width: 9rem;
+
+
+                        h3 {
+
+                            font-size: 1rem;
+                        }
+
+                        i {
+                            font-size: 2.5rem;
+                        }
+                    }
+
+                    i {
+                        transform: translateY(100%);
+                        color: var(--color-secondary);
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+
+        #projects {
+
+            h2 {
+                font-size: 1.5rem;
+
+            }
+
+            .projectWrapper {
+                margin: 4rem 1.5rem;
+
+                .projectImg {
+                    height: 85%;
+                    width: 40%;
+
+                    .hover-item {
+                        ul {
+                            li {
+                                h3 {
+                                    font-size: .7rem;
+                                }
+
+                                a {
+                                    i {
+                                        font-size: .9rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .projectInfo {
+
+                h3 {
+
+                    font-size: 1.1rem;
+                }
+
+                p {
+
+                    font-size: .7rem;
+                }
+
+                .techs {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        #contact {
+
+
+            h3 {
+                font-size: 1.65rem;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+
+            }
+
+            ul {
+
+                i {
+                    font-size: .95rem;
+
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: var(--color-tertiary);
+
+        p {
+
+            font-size: .7rem;
+
+        }
+    }
+}
+
+@media screen and (min-width: 590px) and (max-width:700px) {
+    header {
+        .wrapper {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+
+
+                .toggle {
+                    display: flex;
+                }
+
+                .sect-nav {
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    padding: .8rem;
+
+                    li {
+                        padding: 1rem 0;
+
+                        .sect-btn {
+                            font-size: .85rem;
+                        }
+
+                        .sect-btn::after {
+                            height: 2.5px;
+                            bottom: -5px;
+                        }
+                    }
+                }
+
+                .sect-nav.on {
+                    display: flex;
+                }
+            }
+
+            h1 {
+                width: 90%;
+                font-size: 2.5rem;
+
+                .static {
+                    .intro {
+                        font-size: 1.2rem;
+
+                        .info {
+                            display: none;
+                        }
+                    }
+                }
+
+                .dynamic-txts {
+                    display: none;
+
+                    li {
+                        font-size: 1.2rem;
+
+                        span::after {
+                            height: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    main {
+        #about {
+            h2 {
+                padding: 0 2rem;
+                font-size: 1.5rem;
+            }
+
+            .myAbout {
+                .profilePic {
+                    display: none;
+
+                    img {
+                        width: 50%;
+                        height: 50%;
+
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    li {
+                        padding: 1.5rem;
+
+                        h3 {
+                            font-size: 1rem;
+
+                        }
+
+                        p {
+                            font-size: .8rem;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        #skills {
+
+            h2 {
+                font-size: 1.1rem;
+                padding: 0 2rem;
+            }
+
+            .grid {
+                padding: 1rem;
+
+                ul {
+                    grid-template-columns: repeat(3, 7rem);
+                    grid-template-rows: 7rem;
+                    grid-auto-rows: 7rem;
+
+                    #response {
+
+                        i {
+                            margin: 0.2rem 0;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    li {
+                        height: 6.5rem;
+                        width: 6.5rem;
+
+
+                        h3 {
+
+                            font-size: .6rem;
+                        }
+
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    i {
+                        transform: translateY(100%);
+                        color: var(--color-secondary);
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+
+        #projects {
+
+            h2 {
+                font-size: 1.1rem;
+                padding: 0 2rem;
+
+            }
+
+            .projectWrapper {
+                margin: 1.5rem .5rem;
+                height: 13rem;
+
+                .wide {
+                    width: 55% !important;
+                }
+
+                .projectImg {
+                    height: 85%;
+                    width: 50%;
+
+                    .hover-item {
+                        ul {
+                            li {
+                                h3 {
+                                    font-size: .5rem;
+                                }
+
+                                a {
+                                    i {
+                                        font-size: .5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .projectInfo {
+                padding: .85rem !important;
+                width: 60%;
+
+                h3 {
+                    padding-bottom: .85rem;
+                    font-size: .85rem;
+                }
+
+                p {
+
+                    font-size: .6rem;
+                }
+
+                .techs {
+                    font-size: .65rem;
+                }
+            }
+        }
+
+        #contact {
+
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            h4 {
+                font-size: .75rem;
+
+            }
+
+            ul {
+
+                i {
+                    font-size: .65rem;
+                    padding: .7rem;
+
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: var(--color-tertiary);
+
+
+        p {
+
+            font-size: .55rem;
+
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 590px) {
+    header {
+        .wrapper {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+
+
+                .toggle {
+                    display: flex;
+                }
+
+                .sect-nav {
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    padding: .8rem;
+
+                    li {
+                        padding: 1rem 0;
+
+                        .sect-btn {
+                            font-size: .65rem;
+                        }
+
+                        .sect-btn::after {
+                            height: 2.5px;
+                            bottom: -3px;
+                        }
+                    }
+                }
+
+                .sect-nav.on {
+                    display: flex;
+                }
+            }
+
+            h1 {
+                width: 90%;
+                font-size: 2rem;
+
+                .static {
+                    .intro {
+                        font-size: 1.2rem;
+
+                        .info {
+                            display: none;
+                        }
+                    }
+                }
+
+                .dynamic-txts {
+                    display: none;
+
+                    li {
+                        font-size: 1.2rem;
+
+                        span::after {
+                            height: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    main {
+        #about {
+            h2 {
+                padding: 0 2rem;
+                font-size: 1.1rem;
+            }
+
+            .myAbout {
+                .profilePic {
+                    display: none;
+
+                    img {
+                        width: 50%;
+                        height: 50%;
+
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    li {
+                        padding: 1.5rem;
+
+                        h3 {
+                            font-size: 1rem;
+
+                        }
+
+                        p {
+                            font-size: .8rem;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        #skills {
+
+            h2 {
+                font-size: 1.1rem;
+                padding: 0 2rem;
+            }
+
+            .grid {
+                padding: 1rem;
+
+                ul {
+                    grid-template-columns: repeat(3, 7rem);
+                    grid-template-rows: 7rem;
+                    grid-auto-rows: 7rem;
+
+                    #response {
+
+                        i {
+                            margin: 0.2rem 0;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    li {
+                        height: 6.5rem;
+                        width: 6.5rem;
+
+
+                        h3 {
+
+                            font-size: .6rem;
+                        }
+
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    i {
+                        transform: translateY(100%);
+                        color: var(--color-secondary);
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+
+        #projects {
+
+            h2 {
+                font-size: 1.1rem;
+                padding: 0 2rem;
+
+            }
+
+            .projectWrapper {
+                margin: 1.5rem .5rem;
+                height: 13rem;
+
+                .wide {
+                    width: 55% !important;
+                }
+
+                .projectImg {
+                    height: 85%;
+                    width: 50%;
+
+                    .hover-item {
+                        ul {
+                            li {
+                                h3 {
+                                    font-size: .5rem;
+                                }
+
+                                a {
+                                    i {
+                                        font-size: .5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .projectInfo {
+                padding: .85rem !important;
+                width: 60%;
+
+                h3 {
+                    padding-bottom: .85rem;
+                    font-size: .85rem;
+                }
+
+                p {
+
+                    font-size: .6rem;
+                }
+
+                .techs {
+                    font-size: .65rem;
+                }
+            }
+        }
+
+        #contact {
+
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            h4 {
+                font-size: .75rem;
+
+            }
+
+            ul {
+
+                i {
+                    font-size: .65rem;
+                    padding: .7rem;
+
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: var(--color-tertiary);
+
+
+        p {
+
+            font-size: .55rem;
+
+        }
+    }
+}

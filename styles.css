@@ -17,118 +17,143 @@ h2 {
   font-family: var(--font-mono);
 }
 
-h3 {
-  font-family: var(--font-mono);
-}
-
 p {
   font-family: var(--font-roboto);
+  color: #2c2c2c;
 }
 
 :root {
-  --color-primary: #fef9ef;
-  --color-secondary: #a2d2ff;
-  --color-tertiary: #ff865e;
-  --color-fourth: #ffed78;
-  --color-fifth: rgba(25, 25, 25, 0.8);
+  --color-primary: #faf7f0;
+  --color-secondary: #feff9f;
+  --color-tertiary: #243642;
+  --color-fourth: #117554;
+  --color-fifth: rgba(255, 254, 207, 0.8);
   --font-mono: "Roboto Mono", monospace;
   --font-roboto: "Roboto", sans-serif;
   --font-bona: "Bona Nova", serif;
 }
 
+/* Base styles */
+
 header {
   background-color: var(--color-primary);
   height: 50rem;
 }
+
 header .wrapper {
   height: 100%;
 }
+
 header .wrapper nav {
-  box-sizing: border-box;
-  opacity: 0.95;
-  z-index: 1;
   position: fixed;
   top: 0;
-  background-color: var(--color-fourth);
+  width: 100%;
+  z-index: 1;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
+  background-color: var(--color-fourth);
+  opacity: 0.95;
   font-family: var(--font-mono);
   font-weight: bold;
-  width: 100%;
+  box-sizing: border-box;
+  height: 4rem;
 }
+
 header .wrapper nav .toggle {
   display: none;
   position: absolute;
   right: 10px;
   width: 30px;
   height: 31px;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1.5rem;
   padding: 0.5rem;
+  font-size: 1.5rem;
   color: var(--color-fifth);
   cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
 }
+
 header .wrapper nav .sect-nav {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   padding: 0.65rem 0;
+  max-height: 0; 
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
+
+header .wrapper nav .sect-nav.on {
+  max-height: 100%; /}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 header .wrapper nav .sect-nav li {
+  list-style: none;
+  position: relative;
+  height: 2rem;
   padding: 0 3.5rem;
   background-color: inherit;
-  position: relative;
-  list-style: none;
-  height: 2rem;
 }
+
 header .wrapper nav .sect-nav li .sect-btn {
-  position: relative;
-  padding: 0.2rem;
-  text-decoration: none;
-  font-size: 1rem;
   display: flex;
-  background-color: inherit;
-  color: black;
   justify-content: space-between;
+  padding: 0.2rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: inherit;
+  color: var(--color-primary);
+  position: relative;
 }
+
 header .wrapper nav .sect-nav li .sect-btn::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -5px;
   left: 0;
-  width: 0%;
-  height: 3px;
-  background-color: var(--color-tertiary);
-  transition: 0.3s;
+  width: 0;
+  margin-top: .5rem;
+  height: .8rem;
+  background-color: var(--color-primary);
+  transition: width 0.3s;
 }
+
 header .wrapper nav .sect-nav li .sect-btn:hover::after {
   width: 100%;
+  height: .8rem;
 }
+
 header .wrapper h1 {
-  font-family: var(--font-mono);
-  font-weight: bold;
-  margin: auto 0;
   position: absolute;
   left: 10%;
-  top: 55%;
+  top: 25%;
   width: 100%;
   height: 10.2rem;
+  margin: auto 0;
   padding: 1rem;
   display: flex;
-  font-size: 4.3rem;
   flex-direction: column;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  font-size: 4.3rem;
   color: var(--color-tertiary);
 }
+
 header .wrapper h1 .static .intro {
   display: flex;
-  width: 100%;
-  font-size: 2.4rem;
+  width: 70%;
+  font-size: 2rem;
   font-family: var(--font-mono);
   font-weight: lighter;
 }
+
 header .wrapper h1 .dynamic-txts {
   position: absolute;
   top: 61%;
@@ -137,29 +162,21 @@ header .wrapper h1 .dynamic-txts {
   line-height: 4rem;
   overflow: hidden;
 }
+
 header .wrapper h1 .dynamic-txts li {
-  margin-left: 2rem;
   list-style: none;
+  margin-left: 2rem;
   color: var(--color-secondary);
   font-size: 2.4rem;
   position: relative;
   top: 0;
-  -webkit-animation: switch 10s steps(4) infinite;
-          animation: switch 10s steps(4) infinite;
+  animation: switch 10s steps(4) infinite;
 }
-@-webkit-keyframes switch {
-  100% {
-    top: -258px;
-  }
-}
-@keyframes switch {
-  100% {
-    top: -258px;
-  }
-}
+
 header .wrapper h1 .dynamic-txts li span {
   position: relative;
 }
+
 header .wrapper h1 .dynamic-txts li span::after {
   content: "";
   position: absolute;
@@ -168,113 +185,89 @@ header .wrapper h1 .dynamic-txts li span::after {
   left: 0;
   bottom: 0;
   border-left: 2px solid var(--color-tertiary);
-  -webkit-animation: typing 2.5s steps(10) infinite;
-          animation: typing 2.5s steps(10) infinite;
+  animation: typing 2.5s steps(10) infinite;
   background-color: var(--color-primary);
 }
-@-webkit-keyframes typing {
-  40%, 60% {
-    left: calc(100% + 30px);
-  }
-  100% {
-    left: 0;
-  }
-}
-@keyframes typing {
-  40%, 60% {
-    left: calc(100% + 30px);
-  }
-  100% {
-    left: 0;
-  }
-}
-
 main {
   height: 100%;
   background-color: var(--color-tertiary);
 }
+
 main .grad {
   background: linear-gradient(var(--color-primary), var(--color-secondary));
   height: 10rem;
 }
+
 main #about {
-  border: none;
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 1rem;
+  padding-bottom: 18rem;
   justify-content: space-evenly;
 }
+
 main #about h2 {
-  color: black;
+  color: #2c2c2c;
   font-size: 2.8rem;
   padding: 5rem;
 }
+
 main #about .myAbout {
   display: flex;
 }
+
 main #about .myAbout .profilePic {
   display: flex;
   align-items: center;
   width: 50%;
   height: 100%;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
+
 main #about .myAbout .profilePic img {
-  width: 50%;
+  width: 80%;
   height: 50%;
   border-radius: 50%;
   margin: auto;
 }
-main #about .myAbout ul {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-main #about .myAbout ul li {
-  color: var(--color-primary);
-  padding: 2.5rem;
-  list-style: none;
-}
-main #about .myAbout ul li h3 {
+
+.myAbout p {
   font-size: 1.8rem;
-  padding-bottom: 0.72rem;
-  color: black;
-  font-weight: bold;
-}
-main #about .myAbout ul li p {
-  font-size: 1.2rem;
+  line-height: 3rem;
   text-align: justify;
-  line-height: 1.5;
-  color: var(--color-fifth);
+  padding: 5rem;
 }
-main .angle1 {
-  border: none;
+
+main .angle1,
+main .angle2 {
   width: 100%;
-  background-color: var(--color-secondary);
   height: 5rem;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+  background-color: var(--color-secondary);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
 }
+
+main .angle2 {
+  clip-path: polygon(0 0, 0 0, 100% 100%, 0 100%);
+}
+
 main #skills {
   display: flex;
+  flex-direction: column;
   background-color: var(--color-tertiary);
   width: 100%;
   height: 100%;
-  flex-direction: column;
   padding: 1rem;
-  border: none;
 }
+
 main #skills h2 {
   color: var(--color-primary);
   font-size: 2.5rem;
   padding: 5rem;
 }
+
 main #skills .grid {
   padding: 3rem;
   margin: auto;
@@ -284,25 +277,28 @@ main #skills .grid {
   align-items: center;
   justify-content: center;
 }
+
 main #skills .grid ul {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(5, 15rem);
   grid-template-rows: 15rem;
-  grid-auto-rows: 15rem;
   justify-items: center;
   align-self: center;
 }
+
 main #skills .grid ul #response {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
+
 main #skills .grid ul #response i {
   margin: 0.8rem 0;
   font-size: 3rem;
 }
+
 main #skills .grid ul li {
   padding: 1rem;
   text-align: center;
@@ -312,1019 +308,330 @@ main #skills .grid ul li {
   flex-direction: column;
   justify-content: center;
   line-height: 2.5;
+  transition: background-color 0.2s;
 }
+
 main #skills .grid ul li h3 {
   font-family: var(--font-mono);
-  text-align: center;
   color: var(--color-tertiary);
   font-size: 1.2rem;
 }
+
 main #skills .grid ul li i {
   font-size: 4rem;
   color: var(--color-primary);
 }
+
 main #skills .grid ul li:hover {
   background-color: var(--color-primary);
 }
+
 main #skills .grid ul li:hover h3 {
   text-decoration: underline;
   font-weight: bold;
-  color: black;
+  color: #2c2c2c;
   transform: translateY(-100%);
-  transition: 0.4s;
+  transition: transform 0.4s;
 }
+
 main #skills .grid ul li:hover i {
   transform: translateY(100%);
-  color: var(--color-secondary);
-  transition: 0.2s;
+  color: var(--color-fourth);
+  transition: transform 0.2s;
 }
-main .angle2 {
-  border: none;
-  width: 100%;
-  background-color: var(--color-primary);
-  height: 5rem;
-  -webkit-clip-path: polygon(0 0, 0 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 0 0, 100% 100%, 0 100%);
-}
+
 main #projects {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   width: 100%;
-  height: 100%;
+  height: 25rem;
   color: var(--color-tertiary);
 }
+
 main #projects h2 {
-  color: var(--color-fifth);
+  color: var(--color-tertiary);
   font-size: 2.8rem;
   padding: 0 5rem;
 }
+
 main #projects .projectWrapper {
   margin: 6rem 2rem;
   display: flex;
   width: 90%;
   height: 20rem;
   justify-content: center;
+  align-items: center;
+}
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+  margin: 6rem 2rem;
+  height: 20rem;
+  justify-content: center;
   align-self: center;
   align-items: center;
 }
-main #projects .projectWrapper h3 {
-  color: var(--color-fifth);
-}
-main #projects .projectWrapper .wide {
-  width: 35% !important;
-}
-main #projects .projectWrapper .projectImg {
-  position: relative;
-  border-radius: 15px;
-  width: 25%;
-  height: 100%;
-}
-main #projects .projectWrapper .projectImg .hover-item {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-fourth);
-  position: absolute;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-  transition: all 0.4s ease-in-out;
-  transform: scale(0);
-}
-main #projects .projectWrapper .projectImg .hover-item ul {
+
+.hover-container ul {
   display: flex;
   list-style: none;
-  justify-content: space-between;
-  width: 50%;
-}
-main #projects .projectWrapper .projectImg .hover-item ul li {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
-main #projects .projectWrapper .projectImg .hover-item ul li h3 {
-  color: var(--color-fifth);
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  font-family: monospace;
-  font-weight: 200;
+
+.hover-container ul li {
+  margin: 3rem;
+  position: relative;
 }
-main #projects .projectWrapper .projectImg .hover-item ul li a {
+
+.hover-text {
+  font-size: 30px;
+  position: relative;
+  color: #2c2c2c;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.hover-text:hover {
+  color: var(--color-fourth);
+}
+
+.icon-container {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: var(--color-secondary);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: none;
+  z-index: 1;
+}
+
+.icon-container a {
   text-decoration: none;
 }
-main #projects .projectWrapper .projectImg .hover-item ul li a i {
+
+.icon-container a i {
   font-size: 1.5rem;
-  color: var(--color-fifth);
+  color: var(--color-fourth);
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
-main #projects .projectWrapper .projectImg .hover-item ul :hover h3 {
-  color: black;
+
+.icon-container a:hover i {
+  color: var(--color-primary);
+  background-color: var(--color-tertiary);
 }
-main #projects .projectWrapper .projectImg .hover-item ul :hover i {
-  color: black;
-  background-color: var(--color-secondary);
+
+.icon-link {
+  display: inline-block;
+  margin: 5px;
 }
-main #projects .projectWrapper .projectImg img {
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
+
+.icon {
+  width: 24px;
+  height: 44px;
 }
-main #projects .projectImg:hover .hover-item {
-  opacity: 0.9;
-  transform: scale(1);
-}
-main #projects .projectInfo {
-  padding: 3rem;
-  width: 50%;
-}
-main #projects .projectInfo h3 {
-  padding-bottom: 1.5rem;
-  font-size: 1.9rem;
-}
-main #projects .projectInfo p {
-  text-align: justify;
-  line-height: 1.5;
-  font-size: 1.2rem;
-}
-main #projects .projectInfo p a {
-  text-decoration: underline;
-  cursor: pointer;
-  color: var(--color-secondary);
-  font-weight: bold;
-  font-family: var(--font-mono);
-}
-main #projects .projectInfo .techs {
+
+/* Show icons only when hovering over the li */
+.hover-container ul li:hover .icon-container {
   display: block;
-  font-size: 2.5rem;
-  padding: 3rem 0;
 }
+
 main #contact {
   height: 100%;
   font-family: monospace;
   display: flex;
   flex-direction: column;
-  color: var(--color-primary);
+  color: var(--color-tertiary);
   width: 100%;
   padding: 1rem;
   align-items: center;
-  text-decoration: none;
+  background-color: var(--color-secondary);
 }
-main #contact h3 {
-  font-size: 2.3rem;
-  font-family: monospace;
-  margin: 0.5rem 0;
+
+main #contact h2 {
+  margin: 2.5rem 0;
+  font-size: 2rem;
+  color: var(--color-fourth);
 }
+
 main #contact h4 {
   font-size: 1.5rem;
-  font-family: monospace;
-  margin: 0.5rem 0;
-  margin-bottom: 0.5rem;
+  color: #2c2c2c;
+  margin: 0.5rem 0 0.5rem;
 }
+
 main #contact ul {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 main #contact ul a {
   text-decoration: none !important;
-  color: white;
+  color: var(--color-tertiary);
 }
+
 main #contact ul i {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   padding: 1rem;
 }
+
 main #contact ul i:hover {
-  color: var(--color-fifth);
-  transform: scale(1.2);
-  transition: 0.25s;
-  cursor: pointer;
-}
-
-footer {
-  background-color: var(--color-tertiary);
-}
-footer p {
-  display: flex;
-  align-items: center;
-  border-top: 0.2rem solid var(--color-fifth);
-  margin: auto;
-  padding: 1rem;
-  width: 55%;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--color-fifth);
-  justify-content: center;
-}
-footer p i {
   color: var(--color-fourth);
-  margin: 0 0.5rem;
+  transform: scale(1.2);
+  transition: transform 0.25s;
+}
+footer {
+  background-color: var(--color-fourth);
+  padding: 1rem;
+  text-align: center;
 }
 
-.errorPage {
-  width: 100%;
-  height: 95vh;
-  background-color: var(--color-secondary);
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--font-mono);
-}
-.errorPage h1 {
-  padding-bottom: 5rem;
+footer p {
+  font-size: 1.2rem;
+  color: var(--color-fifth);
+  margin: 0; /* Removes default margin for cleaner spacing */
 }
 
-@media screen and (min-width: 1076px) and (max-width: 1200px) {
-  header .wrapper nav .sect-nav li .sect-btn {
-    font-size: 1rem;
-  }
+/* media queries*/
+
+@media (max-width: 1200px) {
   header .wrapper h1 {
-    width: 80%;
-    font-size: 3.5rem;
+    font-size: 3.5rem; /* Smaller heading */
   }
+
   header .wrapper h1 .static .intro {
-    font-size: 2rem;
+    font-size: 1.8rem; 
   }
-  header .wrapper h1 .dynamic-txts {
-    top: 50%;
-    right: 13%;
-  }
-  header .wrapper h1 .dynamic-txts li {
-    font-size: 2rem;
-  }
-  header .wrapper h1 .dynamic-txts li span::after {
-    height: 3rem;
-  }
-  main #about h2 {
-    font-size: 2.5rem;
-  }
-  main #about .myAbout .profilePic img {
-    width: 55%;
-    height: 55%;
-  }
-  main #about .myAbout ul li {
-    padding: 2.2rem;
-  }
-  main #about .myAbout ul li h3 {
-    font-size: 1.8rem;
-  }
-  main #about .myAbout ul li p {
-    font-size: 1.2rem;
-  }
-  main #skills h2 {
-    font-size: 2.5rem;
-  }
-  main #skills .grid {
-    padding: 2.5rem;
-  }
-  main #skills .grid ul {
-    grid-template-columns: repeat(5, 12rem);
-    grid-template-rows: 12rem;
-    grid-auto-rows: 12rem;
-  }
-  main #skills .grid ul #response i {
-    margin: 0.8rem 0;
-    font-size: 2.65rem;
-  }
-  main #skills .grid ul li {
-    height: 10rem;
-    width: 10rem;
-    margin: 0;
-  }
-  main #skills .grid ul li h3 {
-    font-size: 1.2rem;
-  }
-  main #skills .grid ul li i {
-    font-size: 4.2rem;
-  }
-  main #skills .grid ul i {
-    transform: translateY(100%);
-    color: var(--color-secondary);
-    transition: 0.2s;
-  }
+
+  main #about h2,
+  main #skills h2,
   main #projects h2 {
-    font-size: 2.5rem;
-    padding-bottom: 1.5rem;
+    font-size: 2.5rem; /* Smaller section headings */
   }
-  main #projects .projectWrapper {
-    margin: 4rem 1.5rem;
+
+  main #about .myAbout {
+    flex-direction: column; /* Stack elements vertically */
   }
-  main #projects .projectInfo h3 {
-    font-size: 2rem;
-  }
-  main #projects .projectInfo p {
-    font-size: 1.25rem;
-  }
-  main #projects .projectInfo .techs {
-    font-size: 2rem;
-  }
-  main #contact h3 {
-    font-size: 2rem;
-  }
-  main #contact h4 {
-    font-size: 1.5rem;
-  }
-  main #contact ul i {
-    font-size: 1.4rem;
-  }
-  footer {
-    background-color: var(--color-tertiary);
-  }
-  footer p {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (min-width: 905px) and (max-width: 1076px) {
-  header .wrapper nav .sect-nav li .sect-btn {
-    font-size: 0.85rem;
-    font-weight: bold;
-  }
-  header .wrapper h1 {
-    width: 80%;
-    font-size: 3.1rem;
-  }
-  header .wrapper h1 .static .intro {
-    font-size: 1.85rem;
-  }
-  header .wrapper h1 .dynamic-txts {
-    top: 37%;
-    right: 14%;
-  }
-  header .wrapper h1 .dynamic-txts li {
-    font-size: 2rem;
-  }
-  header .wrapper h1 .dynamic-txts li span::after {
-    height: 2.5rem;
-  }
-  main #about h2 {
-    font-size: 2.5rem;
-  }
-  main #about .myAbout .profilePic img {
-    width: 55%;
-    height: 55%;
-  }
-  main #about .myAbout ul li {
-    padding: 2.2rem;
-  }
-  main #about .myAbout ul li h3 {
-    font-size: 1.65rem;
-  }
-  main #about .myAbout ul li p {
-    font-size: 1rem;
-  }
-  main #skills h2 {
-    font-size: 2.5rem;
-  }
-  main #skills .grid {
-    padding: 2.5rem;
-  }
-  main #skills .grid ul {
-    grid-template-columns: repeat(5, 11rem);
-    grid-template-rows: 11rem;
-    grid-auto-rows: 11rem;
-  }
-  main #skills .grid ul #response i {
-    font-size: 2.75rem;
-  }
-  main #skills .grid ul li {
-    height: 10rem;
-    width: 10rem;
-    margin: 0;
-  }
-  main #skills .grid ul li h3 {
-    font-size: 1.15rem;
-  }
-  main #skills .grid ul li i {
-    font-size: 3.5rem;
-  }
-  main #skills .grid ul i {
-    transform: translateY(100%);
-    color: var(--color-secondary);
-    transition: 0.2s;
-  }
-  main #projects h2 {
-    font-size: 2.25rem;
-    padding-bottom: 1.5rem;
-  }
-  main #projects .projectWrapper {
-    margin: 4rem 1.5rem;
-  }
-  main #projects .projectWrapper .projectImg .hover-item ul li h3 {
-    font-size: 0.7rem;
-  }
-  main #projects .projectInfo h3 {
-    font-size: 1.85rem;
-  }
-  main #projects .projectInfo p {
-    font-size: 1.15rem;
-  }
-  main #projects .projectInfo .techs {
-    font-size: 1.75rem;
-  }
-  main #contact h3 {
-    font-size: 1.85rem;
-  }
-  main #contact h4 {
-    font-size: 1.25rem;
-  }
-  main #contact ul i {
-    font-size: 1.3rem;
-  }
-  footer {
-    background-color: var(--color-tertiary);
-  }
-  footer p {
-    font-size: 0.85rem;
-  }
-}
-@media screen and (min-width: 800px) and (max-width: 905px) {
-  header .wrapper nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header .wrapper nav .toggle {
-    display: flex;
-  }
-  header .wrapper nav .sect-nav {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    display: none;
-    width: 100%;
-    height: 100%;
-    padding: 0.85rem;
-  }
-  header .wrapper nav .sect-nav li {
-    padding: 1.25rem 0;
-  }
-  header .wrapper nav .sect-nav li .sect-btn {
-    font-size: 1rem;
-  }
-  header .wrapper nav .sect-nav.on {
-    display: flex;
-  }
-  header .wrapper h1 {
-    width: 80%;
-    font-size: 2.65rem;
-  }
-  header .wrapper h1 .static .intro {
-    font-size: 1.2rem;
-  }
-  header .wrapper h1 .static .intro .info {
-    display: none;
-  }
-  header .wrapper h1 .dynamic-txts {
-    display: none;
-  }
-  header .wrapper h1 .dynamic-txts li {
-    font-size: 1.2rem;
-  }
-  header .wrapper h1 .dynamic-txts li span::after {
-    height: 2.2rem;
-  }
-  main #about h2 {
-    font-size: 1.95rem;
-  }
-  main #about .myAbout .profilePic img {
-    width: 50%;
-    height: 50%;
-  }
-  main #about .myAbout ul li h3 {
-    font-size: 1.2rem;
-  }
-  main #about .myAbout ul li p {
-    font-size: 0.95rem;
-  }
-  main #skills h2 {
-    font-size: 2rem;
-  }
-  main #skills .grid {
-    padding: 2rem;
-  }
-  main #skills .grid ul {
-    grid-template-columns: repeat(5, 9rem);
-    grid-template-rows: 9rem;
-    grid-auto-rows: 9rem;
-  }
-  main #skills .grid ul #response i {
-    font-size: 2.2rem;
-  }
-  main #skills .grid ul li {
-    height: 8rem;
-    width: 8rem;
-  }
-  main #skills .grid ul li h3 {
-    font-size: 1rem;
-  }
-  main #skills .grid ul li i {
-    font-size: 3.2rem;
-  }
-  main #skills .grid ul i {
-    transform: translateY(100%);
-    color: var(--color-secondary);
-    transition: 0.2s;
-  }
-  main #projects h2 {
-    font-size: 1.8rem;
-  }
-  main #projects .projectWrapper {
-    margin: 4rem 1.5rem;
-  }
-  main #projects .projectWrapper .projectImg .hover-item ul li h3 {
-    font-size: 0.7rem;
-  }
-  main #projects .projectWrapper .projectImg .hover-item ul li a i {
-    font-size: 0.9rem;
-  }
-  main #projects .projectInfo h3 {
-    font-size: 1.3rem;
-  }
-  main #projects .projectInfo p {
-    font-size: 0.85rem;
-  }
-  main #projects .projectInfo .techs {
-    font-size: 1.5rem;
-  }
-  main #contact h3 {
-    font-size: 1.85rem;
-  }
-  main #contact h4 {
-    font-size: 0.85rem;
-  }
-  main #contact ul i {
-    font-size: 0.7rem;
-  }
-  footer {
-    background-color: var(--color-tertiary);
-  }
-  footer p {
-    font-size: 0.7rem;
-  }
-}
-@media screen and (min-width: 700px) and (max-width: 800px) {
-  header .wrapper nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header .wrapper nav .toggle {
-    display: flex;
-  }
-  header .wrapper nav .sect-nav {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    display: none;
-    width: 100%;
-    height: 100%;
-    padding: 0.65rem;
-  }
-  header .wrapper nav .sect-nav li {
-    padding: 1.1rem 0;
-  }
-  header .wrapper nav .sect-nav li .sect-btn {
-    font-size: 0.85rem;
-  }
-  header .wrapper nav .sect-nav.on {
-    display: flex;
-  }
-  header .wrapper h1 {
-    width: 100%;
-    font-size: 2.45rem;
-  }
-  header .wrapper h1 .static .intro {
-    font-size: 1.2rem;
-  }
-  header .wrapper h1 .static .intro .info {
-    display: none;
-  }
-  header .wrapper h1 .dynamic-txts {
-    display: none;
-  }
-  header .wrapper h1 .dynamic-txts li {
-    font-size: 1.2rem;
-  }
-  header .wrapper h1 .dynamic-txts li span::after {
-    height: 2.2rem;
-  }
-  main #about h2 {
-    font-size: 1.5rem;
-  }
-  main #about .myAbout .profilePic img {
-    width: 50%;
-    height: 50%;
-  }
-  main #about .myAbout ul li h3 {
-    font-size: 1rem;
-  }
-  main #about .myAbout ul li p {
-    font-size: 0.8rem;
-  }
-  main #skills h2 {
-    font-size: 1.5rem;
-  }
-  main #skills .grid {
-    padding: 2rem;
-  }
-  main #skills .grid ul {
-    grid-template-columns: repeat(3, 10rem);
-    grid-template-rows: 10rem;
-    grid-auto-rows: 10rem;
-  }
-  main #skills .grid ul #response i {
-    margin: 0.2rem 0;
-    font-size: 2rem;
-  }
-  main #skills .grid ul li {
-    height: 9rem;
-    width: 9rem;
-  }
-  main #skills .grid ul li h3 {
-    font-size: 1rem;
-  }
-  main #skills .grid ul li i {
-    font-size: 2.5rem;
-  }
-  main #skills .grid ul i {
-    transform: translateY(100%);
-    color: var(--color-secondary);
-    transition: 0.2s;
-  }
-  main #projects h2 {
-    font-size: 1.5rem;
-  }
-  main #projects .projectWrapper {
-    margin: 4rem 1.5rem;
-  }
-  main #projects .projectWrapper .projectImg {
-    height: 85%;
-    width: 40%;
-  }
-  main #projects .projectWrapper .projectImg .hover-item ul li h3 {
-    font-size: 0.7rem;
-  }
-  main #projects .projectWrapper .projectImg .hover-item ul li a i {
-    font-size: 0.9rem;
-  }
-  main #projects .projectInfo h3 {
-    font-size: 1.1rem;
-  }
-  main #projects .projectInfo p {
-    font-size: 0.7rem;
-  }
-  main #projects .projectInfo .techs {
-    font-size: 1.5rem;
-  }
-  main #contact h3 {
-    font-size: 1.65rem;
-  }
-  main #contact h4 {
-    font-size: 1.2rem;
-  }
-  main #contact ul i {
-    font-size: 0.95rem;
-  }
-  footer {
-    background-color: var(--color-tertiary);
-  }
-  footer p {
-    font-size: 0.7rem;
-  }
-}
-@media screen and (min-width: 590px) and (max-width: 700px) {
-  header .wrapper nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header .wrapper nav .toggle {
-    display: flex;
-  }
-  header .wrapper nav .sect-nav {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    display: none;
-    width: 100%;
-    height: 100%;
-    padding: 0.8rem;
-  }
-  header .wrapper nav .sect-nav li {
-    padding: 1rem 0;
-  }
-  header .wrapper nav .sect-nav li .sect-btn {
-    font-size: 0.85rem;
-  }
-  header .wrapper nav .sect-nav li .sect-btn::after {
-    height: 2.5px;
-    bottom: -5px;
-  }
-  header .wrapper nav .sect-nav.on {
-    display: flex;
-  }
-  header .wrapper h1 {
-    width: 90%;
-    font-size: 2.5rem;
-  }
-  header .wrapper h1 .static .intro {
-    font-size: 1.2rem;
-  }
-  header .wrapper h1 .static .intro .info {
-    display: none;
-  }
-  header .wrapper h1 .dynamic-txts {
-    display: none;
-  }
-  header .wrapper h1 .dynamic-txts li {
-    font-size: 1.2rem;
-  }
-  header .wrapper h1 .dynamic-txts li span::after {
-    height: 2.2rem;
-  }
-  main #about h2 {
-    padding: 0 2rem;
-    font-size: 1.5rem;
-  }
+
   main #about .myAbout .profilePic {
-    display: none;
-  }
-  main #about .myAbout .profilePic img {
-    width: 50%;
-    height: 50%;
-  }
-  main #about .myAbout ul {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
-  main #about .myAbout ul li {
-    padding: 1.5rem;
-  }
-  main #about .myAbout ul li h3 {
-    font-size: 1rem;
-  }
-  main #about .myAbout ul li p {
-    font-size: 0.8rem;
-  }
-  main #skills h2 {
-    font-size: 1.1rem;
-    padding: 0 2rem;
-  }
-  main #skills .grid {
-    padding: 1rem;
-  }
+
   main #skills .grid ul {
-    grid-template-columns: repeat(3, 7rem);
-    grid-template-rows: 7rem;
-    grid-auto-rows: 7rem;
+    grid-template-columns: repeat(3, 1fr);
   }
-  main #skills .grid ul #response i {
-    margin: 0.2rem 0;
-    font-size: 1.5rem;
-  }
-  main #skills .grid ul li {
-    height: 6.5rem;
-    width: 6.5rem;
-  }
-  main #skills .grid ul li h3 {
-    font-size: 0.6rem;
-  }
-  main #skills .grid ul li i {
-    font-size: 2rem;
-  }
-  main #skills .grid ul i {
-    transform: translateY(100%);
-    color: var(--color-secondary);
-    transition: 0.2s;
-  }
-  main #projects h2 {
-    font-size: 1.1rem;
-    padding: 0 2rem;
-  }
-  main #projects .projectWrapper {
-    margin: 1.5rem 0.5rem;
-    height: 13rem;
-  }
-  main #projects .projectWrapper .wide {
-    width: 55% !important;
-  }
-  main #projects .projectWrapper .projectImg {
-    height: 85%;
-    width: 50%;
-  }
-  main #projects .projectWrapper .projectImg .hover-item ul li h3 {
-    font-size: 0.5rem;
-  }
-  main #projects .projectWrapper .projectImg .hover-item ul li a i {
-    font-size: 0.5rem;
-  }
-  main #projects .projectInfo {
-    padding: 0.85rem !important;
-    width: 60%;
-  }
-  main #projects .projectInfo h3 {
-    padding-bottom: 0.85rem;
-    font-size: 0.85rem;
-  }
-  main #projects .projectInfo p {
-    font-size: 0.6rem;
-  }
-  main #projects .projectInfo .techs {
-    font-size: 0.65rem;
-  }
-  main #contact h3 {
-    font-size: 1rem;
-  }
-  main #contact h4 {
-    font-size: 0.75rem;
-  }
-  main #contact ul i {
-    font-size: 0.65rem;
-    padding: 0.7rem;
-  }
-  footer {
-    background-color: var(--color-tertiary);
-  }
+
   footer p {
-    font-size: 0.55rem;
+    font-size: 0.9rem; /* Smaller footer text */
   }
 }
-@media screen and (max-width: 590px) {
+
+/* Media Query */
+
+@media (max-width: 768px) {
   header .wrapper nav {
+    flex-direction: column; /* Stack nav items */
+  }
+
+  header .wrapper .sect-nav {
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+  }
+
+  .sect-nav.active {
+    max-height: 500px; 
+  }
+
+  header .wrapper nav .toggle {
+    display: block;
+  }
+
+  header .wrapper nav .sect-nav li {
+    padding: 1rem; /* Increase padding for touch targets */
+  }
+
+  header .wrapper h1 {
+    font-size: 2.8rem;
+    top: 20%;
+  }
+
+  main #contact ul {
+    flex-direction: column; 
+    align-items: center; /* Center items */
+  }
+
+  main #projects .projectWrapper {
+    flex-direction: column; 
+    height: auto; /* Allow height to adjust */
+  }
+}
+
+@media (max-width: 480px) {
+  header .wrapper nav {
+    flex-direction: column; /* Stack nav items */
+  }
+
+  header .wrapper .sect-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sect-nav.active {
+    max-height: 500px; 
   }
   header .wrapper nav .toggle {
-    display: flex;
+    display: block;
   }
-  header .wrapper nav .sect-nav {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    display: none;
-    width: 100%;
-    height: 100%;
-    padding: 0.8rem;
-  }
-  header .wrapper nav .sect-nav li {
-    padding: 1rem 0;
-  }
-  header .wrapper nav .sect-nav li .sect-btn {
-    font-size: 0.65rem;
-  }
-  header .wrapper nav .sect-nav li .sect-btn::after {
-    height: 2.5px;
-    bottom: -3px;
-  }
-  header .wrapper nav .sect-nav.on {
-    display: flex;
-  }
+
   header .wrapper h1 {
-    width: 90%;
-    font-size: 2rem;
+    font-size: 2rem; 
   }
-  header .wrapper h1 .static .intro {
-    font-size: 1.2rem;
+
+  header .wrapper nav .sect-nav li {
+    padding: 0.5rem; 
   }
-  header .wrapper h1 .static .intro .info {
-    display: none;
+
+  main #about h2,
+  main #skills h2,
+  main #projects h2 {
+    font-size: 1.8rem; 
   }
-  header .wrapper h1 .dynamic-txts {
-    display: none;
+
+  .hover-text {
+    font-size: 18px; 
   }
-  header .wrapper h1 .dynamic-txts li {
-    font-size: 1.2rem;
+
+  main #contact h2 {
+    font-size: 1.5rem; 
   }
-  header .wrapper h1 .dynamic-txts li span::after {
-    height: 2.2rem;
-  }
-  main #about h2 {
-    padding: 0 2rem;
-    font-size: 1.1rem;
-  }
-  main #about .myAbout .profilePic {
-    display: none;
-  }
-  main #about .myAbout .profilePic img {
-    width: 50%;
-    height: 50%;
-  }
-  main #about .myAbout ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  main #about .myAbout ul li {
-    padding: 1.5rem;
-  }
-  main #about .myAbout ul li h3 {
-    font-size: 1rem;
-  }
-  main #about .myAbout ul li p {
+
+  footer p {
     font-size: 0.8rem;
   }
-  main #skills h2 {
-    font-size: 1.1rem;
-    padding: 0 2rem;
+
+  
+  header {
+    height: auto; 
+    padding: 1rem; 
   }
-  main #skills .grid {
-    padding: 1rem;
+
+  main {
+    padding: 1rem; 
   }
-  main #skills .grid ul {
-    grid-template-columns: repeat(3, 7rem);
-    grid-template-rows: 7rem;
-    grid-auto-rows: 7rem;
-  }
-  main #skills .grid ul #response i {
-    margin: 0.2rem 0;
-    font-size: 1.5rem;
-  }
-  main #skills .grid ul li {
-    height: 6.5rem;
-    width: 6.5rem;
-  }
-  main #skills .grid ul li h3 {
-    font-size: 0.6rem;
-  }
-  main #skills .grid ul li i {
-    font-size: 2rem;
-  }
-  main #skills .grid ul i {
-    transform: translateY(100%);
-    color: var(--color-secondary);
-    transition: 0.2s;
-  }
-  main #projects h2 {
-    font-size: 1.1rem;
-    padding: 0 2rem;
-  }
-  main #projects .projectWrapper {
-    margin: 1.5rem 0.5rem;
-    height: 13rem;
-  }
-  main #projects .projectWrapper .wide {
-    width: 55% !important;
-  }
-  main #projects .projectWrapper .projectImg {
-    height: 85%;
-    width: 50%;
-  }
-  main #projects .projectWrapper .projectImg .hover-item ul li h3 {
-    font-size: 0.5rem;
-  }
-  main #projects .projectWrapper .projectImg .hover-item ul li a i {
-    font-size: 0.5rem;
-  }
-  main #projects .projectInfo {
-    padding: 0.85rem !important;
-    width: 60%;
-  }
-  main #projects .projectInfo h3 {
-    padding-bottom: 0.85rem;
-    font-size: 0.85rem;
-  }
-  main #projects .projectInfo p {
-    font-size: 0.6rem;
-  }
-  main #projects .projectInfo .techs {
-    font-size: 0.65rem;
-  }
-  main #contact h3 {
-    font-size: 1rem;
-  }
-  main #contact h4 {
-    font-size: 0.75rem;
-  }
-  main #contact ul i {
-    font-size: 0.65rem;
-    padding: 0.7rem;
-  }
-  footer {
-    background-color: var(--color-tertiary);
-  }
-  footer p {
-    font-size: 0.55rem;
-  }
-}/*# sourceMappingURL=styles.css.map */
+
+  .hover-container {
+    margin: 3rem 0; 
+    height: auto; }
+}
